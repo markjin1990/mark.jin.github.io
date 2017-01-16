@@ -172,10 +172,10 @@
 /* BG */
 
 	#bg {
-		-moz-animation: bg 512s linear infinite;
-		-webkit-animation: bg 512s linear infinite;
-		-ms-animation: bg 512s linear infinite;
-		animation: bg 512s linear infinite;
+		-moz-animation: bg 1024s linear infinite;
+		-webkit-animation: bg 1024s linear infinite;
+		-ms-animation: bg 1024s linear infinite;
+		animation: bg 1024s linear infinite;
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
@@ -186,10 +186,10 @@
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #348cb2 url("images/bg2.jpg") bottom left;
+		background: #348cb2 url("images/bg6.jpg") bottom left;
 		background-repeat: repeat-x;
-		/*height: 100%;*/
-		background-size: cover;
+		height: 100%;
+		/*background-size: cover;*/
 		left: 0;
 		opacity: 1;
 		position: fixed;
