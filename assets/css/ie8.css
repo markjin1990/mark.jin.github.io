@@ -1,26 +1,60 @@
 /*
-	Aerial by HTML5 UP
+	Read Only by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Header */
+/* Basic */
 
-	#header nav a {
+	code,
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea,
+	.box,
+	.image,
+	.image img,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
 		position: relative;
-		border: solid 1px #fff;
-		border-radius: 100%;
 		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-		#header nav a:before {
-			border: 0;
+/* Form */
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select {
+		line-height: 2.75em;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		-moz-appearance: normal;
+		-webkit-appearance: normal;
+		-ms-appearance: normal;
+		appearance: normal;
+	}
+
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			padding: 0 0 0 1.5em;
 		}
 
-/* Footer */
+			input[type="checkbox"] + label:before,
+			input[type="radio"] + label:before {
+				display: none;
+			}
 
-	#footer {
-		background-image: url("images/ie/footer.png");
-		background-position: bottom left;
-		background-repeat: repeat-x;
+/* Button */
+
+	input[type="submit"].alt,
+	input[type="reset"].alt,
+	input[type="button"].alt,
+	.button.alt {
+		border: solid 2px #e4e4e4;
 	}

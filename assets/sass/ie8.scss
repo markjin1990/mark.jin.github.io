@@ -4,32 +4,59 @@
 @import 'libs/skel';
 
 /*
-	Aerial by HTML5 UP
+	Read Only by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Header */
+/* Basic */
 
-	#header {
-		nav {
-			a {
-				position: relative;
-				border: solid 1px _palette(fg);
-				border-radius: 100%;
-				-ms-behavior: url('assets/js/ie/PIE.htc');
+	code,
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea,
+	.box,
+	.image,
+	.image img,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+	}
 
-				&:before {
-					border: 0;
-				}
+/* Form */
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select {
+		line-height: _size(element-height);
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		@include vendor('appearance', 'normal');
+
+		& + label {
+			padding: 0 0 0 1.5em;
+
+			&:before {
+				display: none;
 			}
 		}
 	}
 
-/* Footer */
+/* Button */
 
-	#footer {
-		background-image: url('images/ie/footer.png');
-		background-position: bottom left;
-		background-repeat: repeat-x;
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		&.alt {
+			border: solid _size(border-width) _palette(border2);
+		}
 	}
