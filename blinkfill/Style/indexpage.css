@@ -1,0 +1,22 @@
+body {
+
+}
+
+#browser_iframe{
+        position : absolute;
+        top      : 0;
+        right    : 0;
+        height   : 100%;
+        width    : 40%;
+}
+
+
+#loadingmessage {
+    position:fixed;
+    top: 30%;
+    left: 60%;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    z-index: 10;
+    /* border: 1px solid #ccc; */
+}

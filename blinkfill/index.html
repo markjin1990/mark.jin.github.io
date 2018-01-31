@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Data Integration by Examples</title>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/jquery.csv-0.71.js"></script>
+    <!-- <script src="app/app.module.js"></script> -->
+    <script src="app/main.js"></script>
+    <script src="app/blinkfill.js"></script>
+    <script src="Scripts/rangy-core.js"></script>
+    <script src="Scripts/handsontable/handsontable.full.js"></script>
+    <link rel="stylesheet" type="text/css" href="Style/indexpage.css">
+    <link rel="stylesheet" media="screen" href="Content/handsontable/handsontable.full.css" />
+
+</head>
+
+<body ng-controller="Main as vm">
+    <h4>This is a modified front-end for BlinkFill derived from <a href="http://cleandata.azurewebsites.net/">BlinkFill Demo</a> made availale by Rishab Singh at Microsoft Research</h4>
+
+    <ul>
+    Note:
+      <li>Please make sure your output examples are in the right-most column.</li>
+      <li>You are allowed to provide output example for any row(s).</li>
+      <li>Once you are done providing input-output examples, click "BlinkFill" button.</li>
+    </ul>
+
+    <input id="fileSelect" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+    <input type="button" value="BlinkFill" onclick="callBlinkFillAPI()" />
+    <div id="loadingmessage" style="display:none"> <img src="data/loadingsquare.GIF" width="64" height="64"/></div>
+
+     <script src="app/fileupload.js"></script>
+
+    <div id="example"> </div>
+
+    <iframe id="browser_iframe" name="browser_iframe"> </iframe>
+
+        <script>
+
+            var data = [
+                ["", "", "", "", ""],
+                ["", "", "", "", ""],
+                ["", "", "", "", ""],
+                ["", "", "", "", ""]
+            ];
+            var container = document.getElementById('example');
+            var hot = new Handsontable(container, {
+                data: data,
+                minSpareRows: 1,
+                minSpareCols: 2,
+                rowHeaders: true,
+                colHeaders: true,
+                contextMenu: true
+            });
+
+
+            
+
+        </script>
+
+</body>
+</html>
