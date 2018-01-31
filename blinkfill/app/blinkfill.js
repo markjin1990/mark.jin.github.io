@@ -34,17 +34,23 @@ function callBlinkFillAPI() {
     var totalRows = TableData.length;
     var ncols = totalCols, nrows=totalRows;
 
+    // Check number of cols
     for (var c = 0; c < totalCols; c++) {
-        if (TableData[0][c]==null || TableData[0][c] == "") {
-            ncols = c;
-            break;
-        }
+        for (var r = 0; r < totalRows; r++) {
+            if (TableData[r][c] != null && TableData[r][c] != "") {
+                ncols = c + 1;
+                break;
+            }  
+        }   
     }
 
+    // Check number of rows
     for (var r = 0; r < totalRows; r++) {
-        if (TableData[r][0]==null || TableData[r][0] == "") {
-            nrows = r;
-            break;
+        for (var c = 0; c < totalCols; c++) {
+            if (TableData[r][c] != null && TableData[r][c] != "") {
+                nrows = r + 1;
+                break;
+            }
         }
     }
 
