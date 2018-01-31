@@ -80,7 +80,7 @@ function callBlinkFillAPI() {
         $.ajax({
             type: "POST",
             cache: false,
-            url: "http://conditionalblinkfillapi.azurewebsites.net/api/CondBlinkFill",
+            url: "https://conditionalblinkfillapi.azurewebsites.net/api/CondBlinkFill",
             dataType: "json",
             contentType: "application/json",
             data: JSON.stringify({
@@ -95,12 +95,20 @@ function callBlinkFillAPI() {
                 }
                 hot.render();
 
-                document.getElementById("result").innerHTML = "Success!";
+                // if (data[data.length-1] == "-1"){
+                //     AmbiguityInfo += "No Ambiguous Input!";
+                // }
+                // else{
+                //     AmbiguityInfo += "Input in Row " + data[data.length-1] + " looks ambiguous. Please inspect.";
+                // }
+                $("#browser_iframe").contents().find('body').html("");
+                $("#browser_iframe").contents().find('body').append("Success");
                 $('#loadingmessage').hide();
             },
             error: function (err) {
-                document.getElementById("result").innerHTML = "Sorry, BlinkFill can't learn this transformation yet.";
-
+                $("#browser_iframe").contents().find('body').html("");
+                $("#browser_iframe").contents().find('body').append("Sorry, BlinkFill can't learn this transformation yet.");
+                console.log();
                 $('#loadingmessage').hide();
             }
         });
