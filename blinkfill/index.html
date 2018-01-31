@@ -18,12 +18,12 @@
 <body ng-controller="Main as vm">
     <h4>This is a modified front-end for BlinkFill derived from <a href="http://cleandata.azurewebsites.net/">BlinkFill Demo</a> made availale by Rishab Singh at Microsoft Research</h4>
 
-    <ul>
-    Note:
-      <li>Please make sure your output examples are in the right-most column.</li>
-      <li>You are allowed to provide output example for any row(s).</li>
-      <li>Once you are done providing input-output examples, click "BlinkFill" button.</li>
-    </ul>
+    <ol>
+    How to use BlinkFill Demo:
+      <li>Load Data: Load the input data by copy-pasting or uploading a csv file.</li>
+      <li>Output Example: Provide the output examples next to the right-most column of the input data. You are OK to provide examples for any rows.</li>
+      <li>Start Synthesis Process: Click "BlinkFill" button. If successfull, the system will fill the empty cells with synthesized data.</li>
+    </ol>
 
     <input id="fileSelect" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
     <input type="button" value="BlinkFill" onclick="callBlinkFillAPI()" />
@@ -31,11 +31,13 @@
 
      <script src="app/fileupload.js"></script>
 
+     <h4><font color="red">System Status:</font> <a id="result"></a></h4>
+    
+
+
     <div id="example"> </div>
 
-    <iframe id="browser_iframe" name="browser_iframe"> </iframe>
-
-        <script>
+    <script>
 
             var data = [
                 ["", "", "", "", ""],
@@ -56,7 +58,11 @@
 
             
 
-        </script>
+    </script>
+
+
+    
+        
 
 </body>
 </html>
