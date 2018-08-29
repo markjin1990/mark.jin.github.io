@@ -1,0 +1,33 @@
+# Site Meta Data
+title: Foofah
+author: Zhongjun Jin
+description: "Automatically synthesize data transformation/wrangling programs by examples."
+keywords:
+
+# Sharing Options
+android_accent: "#00CBC4"
+google_analytics:
+
+# Site Config
+baseurl: ""
+url: "http://umich-dbgroup.github.io/foofah"
+
+# Theme Settings
+hero_image: "images/default.jpg"
+homepage: "http://markjin1990.github.io/"
+download_link: "#"
+
+
+# Build settings
+markdown: kramdown
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+
+permalink: none
+
+sass:
+  style: :compressed
+  compressed: true
+
+gems:
+  - jekyll-sitemap
