@@ -1,2 +1,5 @@
 User-agent: *
+Allow: /assets/doc/*.pdf
 Disallow: /assets/doc/cv.pdf
+
+Sitemap: https://markjin1990.github.io/sitemap.xml
