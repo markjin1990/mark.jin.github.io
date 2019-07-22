@@ -1,5 +1,4 @@
-User-agent: *
-Allow: /assets/doc/*.pdf
-Disallow: /assets/doc/cv.pdf
+User-agent: Googlebot
+Allow: /
 
 Sitemap: https://markjin1990.github.io/sitemap.xml
